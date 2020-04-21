@@ -12,11 +12,11 @@ This Odoo module is designed to send overdue invoice reminders to customers. It 
 
 Why yet another module for invoice reminders ? Because this one is better! It has been designed from the start with the following priorities:
 
-* keep control: you must keep tight control on the overdue invoice reminders that you send. Overdue invoice reminders are part of the communication with your customers, and this is very important to keep a good relation with your customers.
-* usability: the module is easy to configure and easy to use.
-* no accounting skills needed: the module can be used by users without accounting skills. It can even be used by salesman!
-* simplicity: for the developers, the code is small and easy to understand.
-* multi-currency: if you invoice your customer in another currency that your company currency, the invoice reminders only mention the currency of the invoices. And if you invoice a customer with different currencies, the reminder is clear and easy-to-understand by your customer, with a total residual per currency.
+* **keep control**: you must keep tight control on the overdue invoice reminders that you send. Overdue invoice reminders are part of the communication with your customers, and this is very important to keep a good relation with your customers.
+* **usability**: the module is easy to configure and easy to use.
+* **no accounting skills needed**: the module can be used by users without accounting skills. It can even be used by salesman!
+* **simplicity**: for the developers, the code is small and easy to understand.
+* **multi-currency**: if you invoice your customer in another currency that your company currency, the invoice reminders only mention the currency of the invoices. And if you invoice a customer with different currencies, the reminder is clear and easy-to-understand by your customer, with a total residual per currency.
 
 The specifications written before starting the development of this module are written in this `document <https://docs.google.com/document/d/1JIIAP5QsItbJ1zLiaGHuR0RAQplEGv3diOl-d4mS__I/edit?usp=sharing>`_ (in French).
 
@@ -32,13 +32,13 @@ The module supports a clever per-invoice reminder counter mechanism:
 
 There are two user interfaces to send reminders:
 
-* the *one-by-one* interface, which displays one screen for each customer that has overdue invoices, one after the other. You should use this interface when you have a small volume of reminders to send (less an 100 overdue reminders for example). It gives you a tight control on the reminders and the possibility to easily and rapidly customize the reminder e-mails.
-* the *mass* interface, which displays a list view of all customers that have overdue invoices, and you can process several reminders at the same time (via the *Actions* menu).
+* the **one-by-one** interface, which displays one screen for each customer that has overdue invoices, one after the other. You should use this interface when you have a small volume of reminders to send (less an 100 overdue reminders for example). It gives you a tight control on the reminders and the possibility to easily and rapidly customize the reminder e-mails.
+* the **mass** interface, which displays a list view of all customers that have overdue invoices, and you can process several reminders at the same time (via the *Actions* menu).
 
 Configuration
 =============
 
-You should increase the **osv_memory_age_limit** (default value = 1, which means 1 hour) in the Odoo server config file: for example, you can set it to 12 (12 hours). The value must be superior to the duration of the invoicing reminder wizard from start screen to the end.
+You should increase the **osv_memory_age_limit** (default value = 1, which means 1 hour) in the Odoo server config file: for example, you can set it to 12 (12 hours). The value must be superior to the duration of the invoicing reminder wizard from the start screen to the end.
 
 Go to the menu *Invoicing > Configuration > Settings* then go to the section *Overdue Invoice Reminder*: you will be able to configure if you want to attach the overdue invoice to the reminder emails and set default values for some parameters.
 
@@ -78,7 +78,7 @@ Credits
 Authors
 ~~~~~~~
 
-* Akretion
+* `Akretion <https://akretion.com/>`_
 
 Contributors
 ~~~~~~~~~~~~
