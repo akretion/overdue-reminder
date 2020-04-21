@@ -48,7 +48,7 @@ Then, go to the menu *Settings > Technical > E-mail > Templates* and search for 
 
 Go to the menu *Invoicing > Configuration > Invoice Reminder Results* and customize the list of entries.
 
-If prefer `py3o <https://github.com/OCA/reporting-engine/tree/12.0/report_py3o>`_ as reporting engine, you can use the sample py3o report for the overdue reminder letter available in the module `account_invoice_overdue_reminder_py3o <https://github.com/akretion/odoo-py3o-report-templates/tree/12.0/account_invoice_overdue_reminder_py3o>`_.
+If `py3o <https://github.com/OCA/reporting-engine/tree/12.0/report_py3o>`_ is your favorite reporting engine for Odoo, you can use the sample py3o report for the overdue reminder letter available in the module `account_invoice_overdue_reminder_py3o <https://github.com/akretion/odoo-py3o-report-templates/tree/12.0/account_invoice_overdue_reminder_py3o>`_.
 
 Usage
 =====
