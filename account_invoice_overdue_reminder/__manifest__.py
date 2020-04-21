@@ -15,6 +15,7 @@
     'data': [
         'security/ir.model.access.csv',
         'security/rule.xml',
+        'wizard/overdue_reminder_wizard_view.xml',
         'views/partner.xml',
         'views/report.xml',
         'views/report_overdue_reminder.xml',
@@ -22,7 +23,6 @@
         'views/account_invoice_overdue_reminder.xml',
         'views/overdue_reminder_result.xml',
         'views/config_settings.xml',
-        'wizard/overdue_reminder_wizard_view.xml',
         'data/overdue_reminder_result.xml',
         'data/mail_template.xml',
     ],
