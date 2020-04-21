@@ -35,6 +35,8 @@ There are two user interfaces to send reminders:
 * the **one-by-one** interface, which displays one screen for each customer that has overdue invoices, one after the other. You should use this interface when you have a small volume of reminders to send (less an 100 overdue reminders for example). It gives you a tight control on the reminders and the possibility to easily and rapidly customize the reminder e-mails.
 * the **mass** interface, which displays a list view of all customers that have overdue invoices, and you can process several reminders at the same time (via the *Actions* menu).
 
+This video tutorial in English will show you how to configure and use the module: `Youtube link <https://www.youtube.com/watch?v=MaOoVAi7Tc0>`_.
+
 Configuration
 =============
 

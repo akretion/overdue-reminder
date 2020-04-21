@@ -5,7 +5,7 @@
   License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 -->
 
-<odoo noupdate="0">  <!-- TODO set to 1 once finished -->
+<odoo noupdate="1">
 
 
 <record id="overdue_invoice_reminder_mail_template" model="mail.template">
@@ -55,8 +55,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
-        <td style="padding: 5px; border: 1px solid black; font-weight: bold; text-align: right;">Total in ${currency.name}:</td>
+        <td colspan="2" style="padding: 5px; border: 1px solid black; font-weight: bold; text-align: right;">Total Residual in ${currency.name}:</td>
         <td style="padding: 5px; border: 1px solid black; font-weight: bold; text-align: right;">${format_amount(total_residual, currency)}</td>
         <td></td>
     </tr>
