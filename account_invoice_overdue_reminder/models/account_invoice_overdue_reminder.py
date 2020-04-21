@@ -30,10 +30,11 @@ class AccountInvoiceOverdueReminder(models.Model):
         'overdue.reminder.result', ondelete='restrict',
         string='Result/Info')
     result_notes = fields.Text(string='Call Notes')
-    mail_id = fields.Many2one('mail.mail', string='Reminder E-mail')
+    mail_id = fields.Many2one(
+        'mail.mail', string='Reminder E-mail', readonly=True)
     mail_state = fields.Selection(
         related='mail_id.state', string='E-mail Status')
-    counter = fields.Integer()
+    counter = fields.Integer(readonly=True)
     company_id = fields.Many2one(
         related='invoice_id.company_id', store=True)
 
@@ -47,7 +48,7 @@ class AccountInvoiceOverdueReminder(models.Model):
         return [
             ('mail', _('E-mail')),
             ('phone', _('Phone')),
-            ('post', _('Post')),
+            ('post', _('Letter')),
             ]
 
     @api.constrains('invoice_id')

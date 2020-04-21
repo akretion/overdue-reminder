@@ -21,9 +21,15 @@ class OverdueReminderStart(models.TransientModel):
         'res.users', string='Salesman')
     payment_ids = fields.Many2many(
         'overdue.reminder.start.payment', 'wizard_id', readonly=True)
-    start_days = fields.Integer(string='Trigger Delay')
+    start_days = fields.Integer(string='Trigger Delay',
+        help="Odoo will propose to send an overdue reminder to a customer "
+        "if it has at least one invoice which is overdue for more than "
+        "N days (N = trigger delay).")
     min_interval_days = fields.Integer(
-        string='Minimum Delay Since Last Reminder')
+        string='Minimum Delay Since Last Reminder',
+        help="Odoo will not propose to send a reminder to a customer "
+        "that already got a reminder for some of the same overdue invoices "
+        "less than N days ago (N = Minimum Delay Since Last Reminder).")
     up_to_date = fields.Boolean(
         string='I consider that payments are up-to-date')
     company_id = fields.Many2one(

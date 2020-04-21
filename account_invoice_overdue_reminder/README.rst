@@ -1,12 +1,12 @@
 ========================
-Invoice Overdue Reminder
+Overdue Invoice Reminder
 ========================
 
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |agpl| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 
-|badge2|
+|agpl|
 
 This Odoo module is designed to send overdue invoice reminders to customers. It handles reminders by e-mail, letter and phone.
 
@@ -15,8 +15,8 @@ Why yet another module for invoice reminders ? Because this one is better! It ha
 * **keep control**: you must keep tight control on the overdue invoice reminders that you send. Overdue invoice reminders are part of the communication with your customers, and this is very important to keep a good relation with your customers.
 * **usability**: the module is easy to configure and easy to use.
 * **no accounting skills needed**: the module can be used by users without accounting skills. It can even be used by salesman!
-* **simplicity**: for the developers, the code is small and easy to understand.
 * **multi-currency**: if you invoice your customer in another currency that your company currency, the invoice reminders only mention the currency of the invoices. And if you invoice a customer with different currencies, the reminder is clear and easy-to-understand by your customer, with a total residual per currency.
+* **simplicity**: for the developers, the code is small and easy to understand.
 
 The specifications written before starting the development of this module are written in this `document <https://docs.google.com/document/d/1JIIAP5QsItbJ1zLiaGHuR0RAQplEGv3diOl-d4mS__I/edit?usp=sharing>`_ (in French).
 

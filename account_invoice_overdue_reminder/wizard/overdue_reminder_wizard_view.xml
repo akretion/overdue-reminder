@@ -17,17 +17,7 @@
                 <field name="partner_ids" widget="many2many_tags"/>
                 <field name="user_ids" widget="many2many_tags"/>
             </group>
-            <group name="payment_ids" string="Payment Up-to-date Status">
-                <field name="payment_ids" nolabel="1">
-                    <tree>
-                        <field name="journal_id"/>
-                        <field name="last_entry_date"/>
-                        <field name="last_entry_create_date"/>
-                        <field name="last_entry_create_uid"/>
-                    </tree>
-                </field>
-            </group>
-            <group name="main">
+            <group name="options" string="Options">
                 <field name="interface"/>
                 <label for="start_days"/>
                 <div name="start_days">
@@ -38,7 +28,15 @@
                     <field name="min_interval_days" class="oe_inline"/> days
                 </div>
             </group>
-            <group name="up_to_date">
+            <group name="payment_ids" string="Payments up-to-date ?">
+                <field name="payment_ids" nolabel="1" colspan="2">
+                    <tree>
+                        <field name="journal_id"/>
+                        <field name="last_entry_date"/>
+                        <field name="last_entry_create_date"/>
+                        <field name="last_entry_create_uid"/>
+                    </tree>
+                </field>
                 <div name="up_to_date">
                     <field name="up_to_date" class="oe_inline"/>
                     <label for="up_to_date"/>
@@ -173,8 +171,8 @@
     <field name="arch" type="xml">
         <form>
             <div>
-                <h2>Congratulations !</h2>
-                <p>You processed all your overdue invoice reminders!</p>
+                <h2>Good job !</h2>
+                <p>You processed all your overdue invoice reminders.</p>
             </div>
             <footer>
                 <button special="cancel" string="Close" class="btn-primary"/>

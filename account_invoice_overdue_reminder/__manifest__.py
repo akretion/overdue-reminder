@@ -3,11 +3,11 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    'name': 'Account Invoice Overdue Reminder',
+    'name': 'Overdue Invoice Reminder',
     'version': '12.0.1.0.0',
     'category': 'Accounting',
     'license': 'AGPL-3',
-    'summary': 'Simple mail/phone overdue customer invoice reminder ',
+    'summary': 'Simple mail/letter/phone overdue customer invoice reminder ',
     'author': 'Akretion',
     'maintainers': ['alexis-via'],
     'website': 'http://www.akretion.com',
