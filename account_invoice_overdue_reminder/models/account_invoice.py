@@ -42,19 +42,19 @@ class AccountInvoice(models.Model):
             inv.overdue = overdue
 
     @api.depends(
-        'overdue_reminder_ids.date',
+        'overdue_reminder_ids.action_id.date',
         'overdue_reminder_ids.counter',
-        'overdue_reminder_ids.reminder_type')
+        'overdue_reminder_ids.action_id.reminder_type')
     def _compute_overdue_reminder(self):
         aioro = self.env['account.invoice.overdue.reminder']
         for inv in self:
             reminder = aioro.search(
-                [('invoice_id', '=', inv.id)], order='date desc', limit=1)
-            date = reminder and reminder.date or False
-            mail_reminder = aioro.search([
+                [('invoice_id', '=', inv.id)], order='action_date desc', limit=1)
+            date = reminder and reminder.action_date or False
+            counter_reminder = aioro.search([
                 ('invoice_id', '=', inv.id),
-                ('reminder_type', 'in', ('mail', 'post'))],
-                order='date desc, id desc', limit=1)
-            counter = mail_reminder and mail_reminder.counter or False
+                ('action_reminder_type', 'in', ('mail', 'post'))],
+                order='action_date desc, id desc', limit=1)
+            counter = counter_reminder and counter_reminder.counter or False
             inv.overdue_reminder_last_date = date
             inv.overdue_reminder_counter = counter

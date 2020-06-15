@@ -7,8 +7,8 @@
 
 <odoo>
 
-    <report id="overdue_reminder_action_report"
-            model="overdue.reminder.action"
+    <report id="overdue_reminder_step_report"
+            model="overdue.reminder.step"
             string="Overdue Letter"
             report_type="qweb-pdf"
             name="account_invoice_overdue_reminder.report_overdue_reminder"

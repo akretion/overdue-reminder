@@ -4,7 +4,7 @@
 
 {
     'name': 'Overdue Invoice Reminder',
-    'version': '12.0.1.0.0',
+    'version': '12.0.2.0.0',
     'category': 'Accounting',
     'license': 'AGPL-3',
     'summary': 'Simple mail/letter/phone overdue customer invoice reminder ',
@@ -22,6 +22,7 @@
         'views/account_invoice.xml',
         'views/account_invoice_overdue_reminder.xml',
         'views/overdue_reminder_result.xml',
+        'views/overdue_reminder_action.xml',
         'views/config_settings.xml',
         'data/overdue_reminder_result.xml',
         'data/mail_template.xml',

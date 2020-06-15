@@ -59,9 +59,9 @@
 
 <menuitem id="overdue_reminder_start_menu" action="overdue_reminder_start_action" sequence="30" parent="account.menu_finance_entries_actions"/>
 
-<record id="overdue_reminder_action_form" model="ir.ui.view">
-    <field name="name">overdue.reminder.action.form</field>
-    <field name="model">overdue.reminder.action</field>
+<record id="overdue_reminder_step_form" model="ir.ui.view">
+    <field name="name">overdue.reminder.step.form</field>
+    <field name="model">overdue.reminder.step</field>
     <field name="arch" type="xml">
         <form>
             <group name="main" col="4">
@@ -134,9 +134,9 @@
     </field>
 </record>
 
-<record id="overdue_reminder_action_tree" model="ir.ui.view">
-    <field name="name">overdue.reminder.action.tree</field>
-    <field name="model">overdue.reminder.action</field>
+<record id="overdue_reminder_step_tree" model="ir.ui.view">
+    <field name="name">overdue.reminder.step.tree</field>
+    <field name="model">overdue.reminder.step</field>
     <field name="arch" type="xml">
         <tree>
             <field name="commercial_partner_id"/>
@@ -150,16 +150,16 @@
     </field>
 </record>
 
-<record id="overdue_reminder_action_onebyone_action" model="ir.actions.act_window">
-    <field name="name">Overdue Invoice Action</field>
-    <field name="res_model">overdue.reminder.action</field>
+<record id="overdue_reminder_step_onebyone_action" model="ir.actions.act_window">
+    <field name="name">Overdue Invoice Step</field>
+    <field name="res_model">overdue.reminder.step</field>
     <field name="view_mode">form</field>
     <field name="target">new</field>
 </record>
 
-<record id="overdue_reminder_action_mass_action" model="ir.actions.act_window">
-    <field name="name">Overdue Invoice Action</field>
-    <field name="res_model">overdue.reminder.action</field>
+<record id="overdue_reminder_step_mass_action" model="ir.actions.act_window">
+    <field name="name">Overdue Invoice Step</field>
+    <field name="res_model">overdue.reminder.step</field>
     <field name="view_mode">tree,form</field>
     <field name="domain">[('state', '=', 'draft'), ('user_id', '=', uid)]</field>
 </record>
@@ -212,7 +212,7 @@
             name="Change Reminder Type"
             context="{'default_update_action': 'reminder_type'}"
             res_model="overdue.reminder.mass.update"
-            src_model="overdue.reminder.action"
+            src_model="overdue.reminder.step"
             view_mode="form"
             target="new" />
 
@@ -222,7 +222,7 @@
             name="Validate"
             context="{'default_update_action': 'validate'}"
             res_model="overdue.reminder.mass.update"
-            src_model="overdue.reminder.action"
+            src_model="overdue.reminder.step"
             view_mode="form"
             target="new" />
 
@@ -232,7 +232,7 @@
             name="Skip"
             context="{'default_update_action': 'skip'}"
             res_model="overdue.reminder.mass.update"
-            src_model="overdue.reminder.action"
+            src_model="overdue.reminder.step"
             view_mode="form"
             target="new" />
 
